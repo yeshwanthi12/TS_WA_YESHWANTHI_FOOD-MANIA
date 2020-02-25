@@ -1,0 +1,36 @@
+.image{
+    width: 32%;
+	padding-left: 5%;
+	padding-right: 2%;
+	height: 30px;
+	padding-bottom: 10px;
+
+}
+.aboutContainer{
+	background-color: coral;
+	margin:50px; 
+	padding-bottom: 20px;
+}
+.resTitle{
+	text-align: center;
+	color: black;
+	font-size: 40px;
+	font-family: sans-serif;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+.abtRes {
+    color: white;
+	text-align: left;
+	padding-top: 30px;
+	float: right;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    width: 56%;
+    padding-right:5%;
+   line-height: 2;
+
+    
+}

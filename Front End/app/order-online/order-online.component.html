@@ -1,0 +1,42 @@
+
+<div class="m-2" >
+
+	<div class="input-group mb-3">
+  <input id="search" type="text" class="form" placeholder="Search restaurants" 
+  aria-label="restaurants" aria-describedby="basic-addon2"  (change)="FilterRestaurants($event);">
+  <div class="input-group-append">
+    <span class="input-group-text btn btn-outline-success" id="basic-addon2" >Search</span>
+  </div>
+</div>
+</div>
+<div class="orderContainer row col-lg-12 ">
+	<div class="row" *ngFor="let item of totalRestaurents; let i = index">
+		<div class="col-lg-4" *ngIf="item.id == 1">
+			<img class="itemImg" src=".././assets/cafe.jpg">
+		</div>
+		<div class="col-lg-4" *ngIf="item.id == 2">
+			<img class="itemImg" src="https://thumbnails.trvl-media.com/wla0j6O1JjACYxGZBVk9Ns7xv7Y=/773x530/smart/filters:quality(60)/images.trvl-media.com/hotels/33000000/32770000/32768800/32768747/7def4d98_z.jpg">
+		</div>
+		<div class="col-lg-4" *ngIf="item.id == 3">
+			<img class="itemImg" src="https://b.zmtcdn.com/data/pictures/6/5700386/8e746bd7e0c3a55d8e1d668310c6f744.jpg?impolicy=newcropandfit&cropw=2448&croph=2448&cropoffsetx=12&cropoffsety=0&cropgravity=NorthWest&fitw=200&fith=200&fittype=ignore">
+		</div>
+		<div class="col-lg-4" *ngIf="item.id == 4">
+			<img class="itemImg" src="https://content.jdmagicbox.com/comp/pune/t4/020pxx20.xx20.160919100104.z9t4/catalogue/cream-stone-kothrud-pune-ice-cream-parlours-2x100sg.jpg">
+		</div>
+
+	<div class="itemDescripion col-lg-8">
+		<h3>{{item.restaurantName}}</h3>
+		<div>{{item.description}}</div>
+		<div>Minimum order: Rs.{{item.minimumOrder}}</div>
+		<div>Estimation Time: {{item.estimationTime}}</div>
+		<div>{{item.paymentOptions}}</div>
+		
+		<button type="button" class="btn btn-success" [disabled]="!item.orderOnline" (click)="orderNow(item)">Order Now</button>
+	</div>
+	</div>
+	
+</div>
+
+
+
+

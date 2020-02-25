@@ -1,0 +1,78 @@
+.container{
+	width: 100%;
+	border: 1px;
+}
+p{
+
+font-size:20px;
+color: grey;
+}
+.header h1{
+font-size:20px;
+color: grey;
+}
+.subtitle{
+	
+	width: 100%;
+}
+.column1{
+	float: left;
+	border: 1px solid black;
+	text-align: center;
+	width: 33%;
+
+}
+.column2{
+	float: left;
+	border: 1px solid black;
+	text-align: center;
+	width: 33%; 
+}
+.column3{
+	float: left;
+	border: 1px solid black;
+	text-align: center;
+	width: 29%; 
+}
+.add{
+	margin: 50px;
+}
+.leftItems{
+	margin-top: 10px;
+	
+
+}
+.rightItems{
+	background-color:lightgrey;
+	height: 500px;
+	margin-top: 10px;
+}
+.addBtn {
+	margin-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.quantity{
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	font-size: 20px;
+}
+.itemImage{
+	width: 100%;
+    height: 8rem;
+}
+.row-item{
+margin-bottom: 10px;
+}
+.priceDetails{
+	padding-top:10px;
+}
+.noOrders{
+	padding-left: 1rem;;
+}
+.pay{
+	background-color: green;
+	color:white;
+	margin-top: 50px;
+	padding-left: 50px;;
+}

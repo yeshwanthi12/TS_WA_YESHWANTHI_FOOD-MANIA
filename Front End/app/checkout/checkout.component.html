@@ -1,0 +1,120 @@
+
+
+
+
+<div class="infocontainer">
+	<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-7">
+				<div class="row">
+					
+					<label for="inputName" class="col-lg-2 col-form-label">Name:</label>
+					<div class="col-lg-5">
+						<input type="text" class="form-control" formControlName="name" id="inputName" placeholder="Name"><br>
+						<div *ngIf="submitted && f.name.errors" class="error-msg">
+							<div *ngIf="f.name.errors.required">Name is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<label for="inputAddress" class="col-lg-2 col-form-label">Address:</label>
+					<div class="col-lg-5">
+						<input type="text" class="form-control" formControlName="address" id="inputAddress" placeholder="Address"><br>
+						<div *ngIf="submitted && f.address.errors" class="error-msg">
+							<div *ngIf="f.address.errors.required">Address is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<label for="inputNumber" class="col-lg-2 col-form-label">Number:</label>
+					<div class="col-lg-5">
+						<input type="number" class="form-control" formControlName="number" id="inputNumber" placeholder="Number"><br>
+						<div *ngIf="submitted && f.number.errors" class="error-msg">
+							<div *ngIf="f.number.errors.required">Number is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<label for="inputCardName" class="col-lg-2 col-form-label">Name OnCard:</label>
+					<div class="col-lg-5">
+						<input type="text" class="form-control" formControlName="nameOnCard" id="inputCardName" placeholder="Name on card"><br>
+						<div *ngIf="submitted && f.nameOnCard.errors" class="error-msg">
+							<div *ngIf="f.nameOnCard.errors.required">NameOnCard is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<label for="inputCardNumber" class="col-lg-2 col-form-label">Card Number:</label>
+					<div class="col-lg-5">
+						<input type="number" class="form-control" formControlName="cardNumber" id="inputCardNumber" placeholder="Card Number"><br>
+						<div *ngIf="submitted && f.cardNumber.errors" class="error-msg">
+							<div *ngIf="f.cardNumber.errors.required">Card number is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<label for="inputExpMonth" class="col-lg-2 col-form-label">exp Month:</label>
+					<div class="col-lg-5">
+						<input type="number" class="form-control" formControlName="expMonth" id="inputExpMonth" placeholder="Exp Month"><br>
+						<div *ngIf="submitted && f.expMonth.errors" class="error-msg">
+							<div *ngIf="f.expMonth.errors.required">Exp month is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<label for="inputExpMonth" class="col-lg-2 col-form-label">exp year:</label>
+					<div class="col-lg-5">
+						<input type="number" class="form-control" formControlName="expYear" id="inputExpMonth" placeholder="Exp Year"><br>
+						<div *ngIf="submitted && f.expYear.errors" class="error-msg">
+							<div *ngIf="f.expYear.errors.required">Exp year is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<label for="inputCvv" class="col-lg-2 col-form-label">Cvv:</label>
+					<div class="col-lg-5">
+						<input type="number" class="form-control" formControlName="cvv" id="inputCvv" placeholder="Cvv"><br>
+						<div *ngIf="submitted && f.cvv.errors" class="error-msg">
+							<div *ngIf="f.cvv.errors.required">CVV is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<label for="inputZip" class="col-lg-2 col-form-label">zip:</label>
+					<div class="col-lg-5">
+						<input type="number" class="form-control" formControlName="zip" id="inputZip" placeholder="Zip"><br>
+						<div *ngIf="submitted && f.zip.errors" class="error-msg">
+							<div *ngIf="f.zip.errors.required">Zip is required</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 class=a">
+				<div class="summary">Order Summary:</div>
+				<div class="row totalPrice" >
+					<div class="col-lg-1"></div>
+					
+					<div class="col-lg-5">
+						<div>Subtotal</div>
+						
+						<div>Total</div>
+						<button type="submit" class="order btn-success">Place Order
+						</button>
+					</div>
+					<div class="col-lg-6">
+						<div>Rs. &nbsp; {{orderTotal}}</div>
+					
+						<div>Rs. &nbsp;{{orderTotal}} </div>
+						
+					</div>	
+				</div>  
+			</div>
+		</div>
+	</form>
+	
+</div>
+
+
+
+ 

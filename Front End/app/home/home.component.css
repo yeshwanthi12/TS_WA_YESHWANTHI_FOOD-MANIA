@@ -1,0 +1,75 @@
+.homeContainer {
+	background-image: url("../../assets/burger.jpg");
+	width:100%;
+	height:700px;
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size:cover; 
+
+}
+h1 {
+	width: 30%;
+    font-size: 30px;
+    color: blue;
+    padding-left: 98px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: -41px;
+    font-family: initial;
+}
+.navigation li {
+	
+	display: inline;
+	text-decoration: none;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.navigation a{
+color: white;
+}
+.navigation {
+	background-color: black;
+	width: 70%;
+   float: right;
+   padding: 10px;
+   border-radius: 12px;
+
+}
+.Form{
+border: 2px solid black;
+border-radius: 12px;
+padding: 10px;
+margin: 20px;
+width: 30%;
+height: 500px;
+float:right;
+color: orange;
+background-color:black; 
+}
+h2{
+	color: white;
+}
+.uname{
+	width:100%;
+	border-radius: 12px; 
+}
+.pass{
+	width: 100%;
+	border-radius: 12px;
+}
+.button{
+	border-radius: 10px;
+	background-color: orange;
+	text-align: center;
+	margin-left:150px;
+	color: white;
+}
+hr{
+	color: white;
+	border: 1px solid white;
+
+}
+ 

@@ -1,0 +1,88 @@
+<div class="container">
+        <h3>{{restaurantName}}</h3>
+	
+    <div class="subtitle col-xl-12">
+		<div class="column1 col-xl-4">
+		   <h5>Delivery Time</h5>
+           <p>34 mins</p>
+        </div>
+         <div class="column2 col-x1-4">
+		    <h5>Minimum Order</h5>
+            <p>50 rs</p>
+        </div>
+         <div class="column3 col-x1-4">
+		    <h5>Payment Methods</h5>
+            <p>Online or Cash</p>
+        </div>
+    </div>
+</div>
+
+<div class="row col-lg-12">
+	<div class="leftItems col-lg-8">
+		<div class="row row-item">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-4 font-weight-bold">Item details</div>
+			<div class="col-lg-3 font-weight-bold">Price</div>
+			<div class="col-lg-3"></div>
+		</div>
+		<div class="row row-item" *ngFor="let item of menuItems">
+			<div class="col-lg-2">
+				<img class="itemImage" [src]="item.itemImage">
+			</div>
+			<div class="col-lg-4">
+			   <h3>{{item.itemName}}</h3>
+		       <p>{{item.itemDescription}}</p>
+			 </div>  
+			 <div class="col-lg-3">
+				 <div class="priceDetails">
+				 	<div>Item price: &nbsp;{{item.itemPrice}}</div>
+				 	<div *ngIf="item.qty">Total price: &nbsp;{{item.itemPrice * item.qty}}</div>
+				</div>
+			</div>
+			<div class="col-lg-3">
+			  	<div class="addBtn">
+				 
+					<button type="button" class="btn btn-success"  *ngIf="item.showAdd" (click)="add(item)">Add</button>
+  					<span *ngIf="!item.showAdd">
+    					<button class="btn btn-danger" (click)="delete(item)">-</button>
+    					<span class="quantity">{{item.qty}}</span>
+    					<button class="btn btn-primary"  (click)="update(item)">+</button>
+  					</span> 
+				</div>
+			</div>  
+		</div>
+	 </div>
+	
+		
+	<div class="rightItems col-lg-4">
+		<br>
+	   <h4>Your Order</h4><br>
+	   <div class="noOrders" *ngIf="orderTotalPrice == 0"> No order</div>
+	   <div class="row" *ngIf="orderTotalPrice != 0"> 
+			<div class="col-lg-6 font-weight-bold">Item name</div>   
+			<div class="col-lg-2 font-weight-bold">Qty</div>
+			<div class="col-lg-4 font-weight-bold">Price</div>
+		</div>
+		<div class="row-item">
+
+		
+			<div *ngFor="let finalItem of menuItems">
+				<div *ngIf="finalItem.qty">
+						
+						<div class="row">
+							<div class="col-lg-6">{{finalItem.itemName}}</div>   
+							<div class="col-lg-2">{{finalItem.qty}}</div>
+							<div class="col-lg-4">{{finalItem.itemTotalPrice}}</div>
+						</div>
+				</div>
+					
+			</div>
+		</div>
+	   <h3>Order Total: &nbsp; Rs.{{orderTotalPrice}}</h3>
+	   <button type="button" class="addBtn btn-success"  [disabled]="orderTotalPrice == 0" (click)="proceedToCheckout()">Proceed to checkout</button> <br>
+	   <button type="button" class="addBtn btn-succes pay"(click)="payOnDelivery()">Pay On Delivery</button> 
+	</div>	
+</div>	
+  
+
+
